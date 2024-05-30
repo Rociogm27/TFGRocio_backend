@@ -7,6 +7,11 @@ import { DataTypes } from "sequelize";
  * Con esta clase hacemos el "mapeo" de la bd.
  * Creamos el modelo usuario con los atributos definidos en la base de datos
  * salvo el id, createdAt y updatedAt
+ *    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
  */
 
 const UsuarioModel = db.define('usuarios', {

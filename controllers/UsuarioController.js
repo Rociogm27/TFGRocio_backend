@@ -25,7 +25,8 @@ export const getUsuario = async (req, res) => {
 
 export const createUsuario = async (req,res) => {
     try {
-        await UsuarioModel.create(req.body)     //Capturamos todo el objeto con req.body
+        console.log(req.body)
+        await UsuarioModel.create(req.body)     //Capturamos todo el objeto con req.body 
         res.json({                              //Mostramos un json que diga  se ha creado correctamente
             "message" : "Usuariocreado correctamente"
         })

@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "tfg_user",
+    "password": "usuario27",
+    "database": "tfg",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "tfg_user",
+    "password": "usuario27",
+    "database": "tfg",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "tfg_user",
+    "password": "usuario27",
+    "database": "tfg",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
