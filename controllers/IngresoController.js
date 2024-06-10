@@ -12,6 +12,17 @@ export const getAllIngresos= async (req, res) => {
     }
 }
 
+export const getAllIngresosCuenta = async (req,res) => {
+    try {
+        const ingresosCuenta = await IngresoModel.findAll({
+            where:{ cuenta_id:req.params.id}   //Nos pasan el id y lo cogemos haciendo req.params.id
+        })
+        res.json(ingresosCuenta)
+    } catch (error) {
+        res.json( {message: error.message} )
+    }
+}
+
 
 export const getIngreso = async (req, res) => {
     try {

@@ -12,6 +12,18 @@ export const getAllGastos = async (req, res) => {
     }
 }
 
+export const getAllGastosCuenta = async (req,res) => {
+    try {
+        const gastosCuenta = await GastoModel.findAll({
+            where:{ cuenta_id:req.params.id}   //Nos pasan el id y lo cogemos haciendo req.params.id
+        })
+        res.json(gastosCuenta)
+    } catch (error) {
+        res.json( {message: error.message} )
+    }
+}
+
+
 export const getGasto = async (req, res) => {
     try {
         const gasto = await GastoModel.findAll({

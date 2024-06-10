@@ -11,6 +11,17 @@ export const getAllCuentas = async (req, res) => {
         res.json( {message: error.message} )
     }
 }
+//mostrar todas las cuentas de un usuario
+export const getAllCuentasUser = async (req,res) => {
+    try {
+        const cuentasUser = await CuentaModel.findAll({
+            where:{ usuario_id:req.params.id}   //Nos pasan el id y lo cogemos haciendo req.params.id
+        })
+        res.json(cuentasUser)
+    } catch (error) {
+        res.json( {message: error.message} )
+    }
+}
 
 export const getCuenta = async (req, res) => {
     try {
