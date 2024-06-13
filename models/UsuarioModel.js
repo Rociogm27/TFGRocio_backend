@@ -19,7 +19,8 @@ const UsuarioModel = db.define('usuarios', {
     nombre: { type: DataTypes.STRING },
     email: { type: DataTypes.STRING},
     contrasena: { type: DataTypes.STRING},
-    presupuesto_mes: { type: DataTypes.INTEGER}
+    presupuesto_mes: { type: DataTypes.INTEGER},
+    admin: { type: DataTypes.INTEGER}
 }, {
     timestamps: false, // Desactiva las columnas createdAt y updatedAt
    })

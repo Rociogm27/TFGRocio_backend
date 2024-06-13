@@ -4,15 +4,12 @@ import db from "./database/db.js"
 
 import usuarioRoutes from './routes/routesUsuario.js'
 import cuentaRoutes from './routes/routesCuenta.js'
-import administradorRoutes from './routes/routesAdministrador.js'
 import gastoRoutes from './routes/routesGasto.js'
-import historialGastosRoutes from './routes/routesHistorialGastos.js'
 import notificacionRoutes from './routes/routesNotificacion.js'
 import sugerenciasRoutes from './routes/routesSugerencias.js'
 import tipoGastoRoutes from './routes/routesTipoGasto.js'
 import ingresoRoutes from './routes/routesIngreso.js'
 import tipoIngresoRoutes from './routes/routesTipoIngreso.js'
-import historialIngresoRoutes from './routes/routesHistorialIngresos.js'
 
 
 
@@ -33,15 +30,12 @@ app.use(express.json())
 //Enlace para las rutas
 app.use('/usuarios', usuarioRoutes)
 app.use('/cuentas', cuentaRoutes)
-app.use('/administradores', administradorRoutes)
 app.use('/gastos', gastoRoutes)
-app.use('/historialgastos', historialGastosRoutes)
 app.use('/notificaciones', notificacionRoutes)
 app.use('/sugerencias', sugerenciasRoutes)
 app.use('/tipogastos', tipoGastoRoutes)
 app.use('/ingresos', ingresoRoutes)
 app.use('/tipoingresos', tipoIngresoRoutes)
-app.use('/historialingresos', historialIngresoRoutes)
 
 
 
