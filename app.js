@@ -2,17 +2,19 @@ import express from "express";
 import cors from 'cors'
 import db from "./database/db.js"
 
+
 import usuarioRoutes from './routes/routesUsuario.js'
 import cuentaRoutes from './routes/routesCuenta.js'
 import gastoRoutes from './routes/routesGasto.js'
 import notificacionRoutes from './routes/routesNotificacion.js'
 import sugerenciasRoutes from './routes/routesSugerencias.js'
-import tipoGastoRoutes from './routes/routesTipoGasto.js'
 import ingresoRoutes from './routes/routesIngreso.js'
-import tipoIngresoRoutes from './routes/routesTipoIngreso.js'
 
 
+import dotenv from 'dotenv';
 
+// Cargar las variables de entorno desde el archivo .env
+dotenv.config();
 
 
 const app = express()
@@ -33,9 +35,7 @@ app.use('/cuentas', cuentaRoutes)
 app.use('/gastos', gastoRoutes)
 app.use('/notificaciones', notificacionRoutes)
 app.use('/sugerencias', sugerenciasRoutes)
-app.use('/tipogastos', tipoGastoRoutes)
 app.use('/ingresos', ingresoRoutes)
-app.use('/tipoingresos', tipoIngresoRoutes)
 
 
 
