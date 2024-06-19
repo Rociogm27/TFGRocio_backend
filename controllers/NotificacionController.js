@@ -2,7 +2,19 @@ import NotificacionModel from "../models/NotificacionModel.js";
 
 //metodos del CRUD
 
-//Mostrar los usuarios
+export const getNotificacionesByUser = async (req, res) => {
+    try {
+        const notificaciones = await NotificacionModel.findAll({
+            where: { usuario_id: req.params.id }
+        });
+        res.json(notificaciones);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
+
+//Mostrar las notificaciones 
 export const getAllNotificaciones = async (req, res) => {
     try {
         const notificaciones = await NotificacionModel.findAll()
